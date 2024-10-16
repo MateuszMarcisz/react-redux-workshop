@@ -1,42 +1,50 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.container {
+    width: 80vw; /* Set container width to 80% of the viewport */
+    margin: 0 auto; /* Center the container */
+    padding: 2rem; /* Add padding for inner spacing */
+    background-color: #fff; /* Background color for contrast */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+h1 {
+    margin-top: 1rem; /* Space below the navbar */
+    text-align: center; /* Center the header text */
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+    height: 6em; /* Logo height */
+    padding: 1.5em; /* Space around logo */
+    will-change: filter;
+    transition: filter 300ms; /* Animation for hover */
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #646cffaa); /* Drop shadow on hover */
 }
+
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+    filter: drop-shadow(0 0 2em #61dafbaa); /* Drop shadow for React logo on hover */
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg); /* Spin animation */
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear; /* Animation for specific link */
+    }
 }
 
 .card {
-  padding: 2em;
+    padding: 2em; /* Inner spacing for cards */
 }
 
 .read-the-docs {
-  color: #888;
+    color: #888; /* Text color for "read the docs" */
 }
