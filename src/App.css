@@ -48,3 +48,49 @@ h1 {
 .read-the-docs {
     color: #888; /* Text color for "read the docs" */
 }
+
+
+/* Movie list styling */
+
+.movie-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    border-color: #007bff; /* Optional: Change border color on hover */
+}
+
+.no-padding {
+    padding-left: 0 !important;  /* Remove left padding */
+    padding-right: 0 !important; /* Remove right padding */
+}
+
+.movie-container {
+    margin-top: 2rem;
+    padding: 2rem; /* Add padding for inner spacing */
+    background-color: #fff; /* Background color for contrast */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+
+}
+
+/* Search Form styling */
+
+form {
+    display: flex;
+    margin-bottom: 2rem; /* Add space below the form */
+}
+
+input[type='text'] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /*margin-right: 1rem; !* Space between input and button *!*/
+}
+
+button {
+    padding: 0.5rem 1rem; /* Consistent button size */
+}
