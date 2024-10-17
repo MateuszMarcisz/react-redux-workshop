@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const apiKey = import.meta.env.API_KEY;
+const apiKey = import.meta.env.VITE_API_KEY;
 
 // async thunk to fetch movies
 export const fetchMovies = createAsyncThunk(
@@ -13,7 +13,7 @@ export const fetchMovies = createAsyncThunk(
                 title: movie.Title,
                 year: movie.Year,
                 // type: movie.Type,
-                // imdbID: movie.imdbID,
+                imdbID: movie.imdbID,
                 poster: movie.Poster,
             }));
         } else {
