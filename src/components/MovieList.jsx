@@ -4,7 +4,6 @@ import {useSelector} from "react-redux";
 import WatchListCheckbox from "./WatchListCheckbox.jsx";
 
 const MovieList = ({movies = [], showYear = false, showPoster = false, showRating = true, showToWatch = true}) => {
-    const ratings = useSelector((state) => state.ratings)
     return (<>
         <h2>Movies:</h2>
         <Row>
