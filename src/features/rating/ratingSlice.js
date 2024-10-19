@@ -6,8 +6,8 @@ const ratingSlice = createSlice({
     initialState: {},
     reducers: {
         setRating: (state, action) => {
-            const {movieId, rating} = action.payload;
-            state[movieId] = rating;
+            const {rating, movie} = action.payload;
+            state[movie.imdbID] = {...movie, rating};
         }
     }
 });

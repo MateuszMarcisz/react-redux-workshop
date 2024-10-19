@@ -14,7 +14,7 @@ const MovieList = ({movies = [], showYear = false, showPoster = false, showRatin
                         <h3>
                             {movie.title} {showYear && `(${movie.year})`}
                         </h3>
-                        {showRating && <Rating movieId={movie.imdbID}/>}
+                        {showRating && <Rating movie={movie}/>}
                         {showToWatch && <WatchListCheckbox movie={movie}/>}
                     </div>
                 </Col>
