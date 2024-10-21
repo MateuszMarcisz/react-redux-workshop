@@ -8,10 +8,11 @@ const Navbar = () => {
             <BootstrapNavbar.Brand href="/">Movie Library</BootstrapNavbar.Brand>
             <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav"/>
             <BootstrapNavbar.Collapse id="basic-navbar-nav">
+                {/* Using Link for navigation is important so the page doesn't reload!*/}
                 <Nav className="me-auto">
-                    <Nav.Link as={Link} to="/">Search</Nav.Link> {/* Use Link for navigation */}
-                    <Nav.Link as={Link} to="/to-watch">To Watch</Nav.Link> {/* Use Link for navigation */}
-                    <Nav.Link as={Link} to="/watched">Watched</Nav.Link> {/* Use Link for navigation */}
+                    <Nav.Link as={Link} to="/">Search</Nav.Link>
+                    <Nav.Link as={Link} to="/to-watch">To Watch</Nav.Link>
+                    <Nav.Link as={Link} to="/watched">Watched</Nav.Link>
                 </Nav>
             </BootstrapNavbar.Collapse>
         </BootstrapNavbar>
