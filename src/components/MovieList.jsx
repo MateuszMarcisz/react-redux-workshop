@@ -1,6 +1,5 @@
 import {Row, Col} from 'react-bootstrap';
 import Rating from "./Rating.jsx";
-import {useSelector} from "react-redux";
 import WatchListCheckbox from "./WatchListCheckbox.jsx";
 
 const MovieList = ({movies = [], showYear = false, showPoster = false, showRating = true, showToWatch = true}) => {

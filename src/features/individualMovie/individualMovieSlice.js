@@ -5,7 +5,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 export const fetchIndividualMovie = createAsyncThunk(
     'individualMovie/fetchIndividualMovies',
     async (movieId) => {
-        const response = await fetch(`https://www.omdbapi.com/?i=${movieId}&apikey=${apiKey}`);
+        const response = await fetch(`https://www.omdbapi.com/?i=${movieId}&plot=full&apikey=${apiKey}`);
         const data = await response.json();
         if (data.Response === 'True') {
             return {
@@ -16,6 +16,7 @@ export const fetchIndividualMovie = createAsyncThunk(
                 director: data.Director,
                 actors: data.Actors,
                 poster: data.Poster,
+                imdbID: data.imdbID,
             };
         } else {
             return new Error(data.Error);
