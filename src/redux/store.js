@@ -2,6 +2,7 @@ import {configureStore} from "@reduxjs/toolkit";
 import movieReducer from '../features/movie/movieSlice.js';
 import ratingReducer from '../features/rating/ratingSlice.js';
 import toWatchMoviesReducer from '../features/toWatchMovies/toWatchMoviesSlice.js';
+import individualMovieReducer from "../features/individualMovie/individualMovieSlice.js";
 
 
 const store = configureStore({
@@ -9,6 +10,7 @@ const store = configureStore({
         movies: movieReducer,
         ratings: ratingReducer,
         toWatchMovies: toWatchMoviesReducer,
+        individualMovie: individualMovieReducer,
     },
 });
 
