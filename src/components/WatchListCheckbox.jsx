@@ -22,7 +22,7 @@ const WatchListCheckbox = ({movie}) => {
             <input
                 type='checkbox'
                 id={`watchlist-${movie.imdbID}`}
-                check={isChecked}
+                checked={isChecked}
                 onChange={handleChange}
             />
             <label htmlFor={`watchlist-${movie.imdbID}`}>Add to Watchlist</label>
