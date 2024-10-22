@@ -1,9 +1,9 @@
 import MovieList from "../../components/MovieList.jsx";
 import {useSelector} from "react-redux";
+import {selectWatchedMovies} from "../../redux/selectors.js";
 
 const WatchedPage = () => {
-    const ratedMovies = useSelector((state) => state.ratings);
-    const watchedMovies = Object.values(ratedMovies);
+    const watchedMovies = useSelector(selectWatchedMovies);
 
     return (
         <div>

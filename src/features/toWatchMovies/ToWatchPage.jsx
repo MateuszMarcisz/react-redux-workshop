@@ -3,7 +3,7 @@ import MovieList from "../../components/MovieList.jsx";
 
 const ToWatchPage = () => {
     const toWatchMovies = useSelector((state) => state.toWatchMovies);
-    console.log(toWatchMovies);
+
     return (
         <div>
             <h2>Movies You would love to watch!</h2>
