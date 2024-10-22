@@ -1,16 +1,15 @@
 import './Rating.css';
 import {useDispatch, useSelector} from "react-redux";
 import {setRating} from "../features/rating/ratingSlice.js";
+import {selectCurrentRating} from "../redux/selectors.js";
 
-const Rating = ({ movie }) => {
+const Rating = ({movie}) => {
     const dispatch = useDispatch();
-    const movieRatings = useSelector((state) => state.ratings);
-
-    const currentRating = movieRatings[movie.imdbID]?.rating || 0;
+    const currentRating = useSelector(state => selectCurrentRating(state, movie.imdbID));
 
     const handleRatingChange = (e) => {
         const rating = e.target.value;
-        dispatch(setRating({ movie, rating }));
+        dispatch(setRating({movie, rating}));
     };
 
     return (
