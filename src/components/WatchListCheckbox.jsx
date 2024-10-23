@@ -23,6 +23,9 @@ const WatchListCheckbox = ({movie}) => {
                 id={`watchlist-${movie.imdbID}`}
                 checked={isChecked}
                 onChange={handleChange}
+                style={{
+                    marginRight: '0.5rem'
+                }}
             />
             <label htmlFor={`watchlist-${movie.imdbID}`}>Add to Watchlist</label>
         </div>
