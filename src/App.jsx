@@ -9,13 +9,16 @@ import store, {persistor} from "./redux/store.js";
 import IndividualMoviePage from "./features/individualMovie/IndividualMoviePage.jsx";
 import {PersistGate} from "redux-persist/integration/react";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faVideoCamera} from '@fortawesome/free-solid-svg-icons';
+
 function App() {
     return (
         <Provider store={store}>
             <PersistGate persistor={persistor} loading={null}>
                 <Router>
                     <div className="container">
-                        <h1>Welcome to My Movie Library</h1>
+                        <h1> <FontAwesomeIcon icon={faVideoCamera} /> Welcome to my Movie App project</h1>
                         <Navbar/>
                         <Routes>
                             <Route path="/" element={<SearchPage/>}/>
