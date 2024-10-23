@@ -18,4 +18,9 @@
     color: black;
 }
 
-
+.color {
+    background-color: rgb(137, 207, 240);
+    height: 3.5rem;
+    /*padding:0;*/
+    /*margin: 1rem*/
+}
