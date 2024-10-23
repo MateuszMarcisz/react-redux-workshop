@@ -1,0 +1,21 @@
+/* reset padding */
+.nav, .navbar, .navbar-collapse {
+    padding: 0;
+}
+
+.nav-link {
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    height: 3.5rem;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+

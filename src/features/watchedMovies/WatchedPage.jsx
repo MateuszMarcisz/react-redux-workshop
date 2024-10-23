@@ -9,11 +9,11 @@ const WatchedPage = () => {
         <div className='movie-container'>
             {watchedMovies.length > 0 ? (
                 <>
-                    <h2>Movies You have already watched</h2>
+                    <h2 className='movielist-heading text-center p-3'>Movies You have already watched</h2>
                     <MovieList movies={watchedMovies} showYear={true} showPoster={true} showToWatch={false}/>
                 </>
             ) : (
-                <h2>Looks like You haven't rated any movies yet!</h2>
+                <h2 className='movielist-heading text-center p-3'>Looks like You haven't rated any movies yet!</h2>
             )}
         </div>
     );

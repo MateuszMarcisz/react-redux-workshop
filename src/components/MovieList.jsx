@@ -11,11 +11,13 @@ const MovieList = ({movies = [], showYear = false, showPoster = false, showRatin
                     <div className="movie-card text-center">
                         <Link to={`/movie/${movie.imdbID}`} className="text-decoration-none">
                             {showPoster && <img src={movie.poster} alt={movie.title} className="img-fluid"/>}
-                            <h3>
-                                {movie.title} {showYear && `(${movie.year})`}
-                            </h3>
+                            <h3>{movie.title} {showYear && `(${movie.year})`}</h3>
                         </Link>
-                        {showRating && <Rating movie={movie}/>}
+                        {showRating && (
+                            <div className="rating-container">
+                                <Rating movie={movie}/>
+                            </div>
+                        )}
                         {showToWatch && <WatchListCheckbox movie={movie}/>}
                     </div>
 
