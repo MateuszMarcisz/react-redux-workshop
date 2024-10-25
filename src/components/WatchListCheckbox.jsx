@@ -1,12 +1,11 @@
 import {useDispatch, useSelector} from "react-redux";
 import {addToWatchList, removeFromWatchList} from "../features/toWatchMovies/toWatchMoviesSlice.js";
-import {useEffect} from "react";
+import {selectIsMovieInWatchlist} from "../redux/selectors.js";
 
 
 const WatchListCheckbox = ({movie}) => {
     const dispatch = useDispatch();
-    const moviesToWatch = useSelector((state) => state.toWatchMovies);
-    const isChecked = moviesToWatch.some(m => m.imdbID === movie.imdbID);
+    const isChecked = useSelector((state) => selectIsMovieInWatchlist(state, movie.imdbID));
 
 
     const handleChange = (e) => {
@@ -22,8 +21,11 @@ const WatchListCheckbox = ({movie}) => {
             <input
                 type='checkbox'
                 id={`watchlist-${movie.imdbID}`}
-                check={isChecked}
+                checked={isChecked}
                 onChange={handleChange}
+                style={{
+                    marginRight: '0.5rem'
+                }}
             />
             <label htmlFor={`watchlist-${movie.imdbID}`}>Add to Watchlist</label>
         </div>
